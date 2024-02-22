@@ -31,7 +31,7 @@ base_url = config['Qualtrics']['base_url']
 # Prompt user to enter the survey ID
 survey_id = input("Enter the survey ID (e.g., SV_123ABC): ")
 
-# Fetch survey details
+# Fetch survey name and owner ID
 survey_details = get_survey_details(api_token, base_url, survey_id)
 if survey_details:
     print("Survey Name:", survey_details['result']['name'])
