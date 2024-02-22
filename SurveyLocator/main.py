@@ -21,10 +21,9 @@ def get_owner_details(api_token, base_url, owner_id):
         print("Error fetching user details:", response.status_code)
         return None
 
-# Read config file
+# Read config file which contains Base URL and API Token
 config = configparser.ConfigParser()
 config.read('config.ini')
-
 api_token = config['Qualtrics']['api_token']
 base_url = config['Qualtrics']['base_url']
 
